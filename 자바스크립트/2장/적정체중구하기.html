@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+
+<head>
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    var name = prompt("당신의 이름은?");
+    var age = prompt("당신의 나이는?");
+    var height = parseInt(prompt("당신의 신장은?"));
+    var weight = parseInt(prompt("당신의 몸무게는?"));
+
+    var guide;
+    if (age > 40) {
+      guide = (height - 100) * 0.9;
+    } else {
+      guide = (height - 100) * 0.8;
+    }
+ var a=weight/guide;
+
+ document.write(name+","+age+"세, ")
+    if(a>=1.2){
+      document.write("과체중입니다.");
+    }else if(a>=1){
+      document.write("표준입니다.");
+    }else{
+      document.write("저체중입니다.");
+    }
+
+  </script>
+</body>
+
+</html>

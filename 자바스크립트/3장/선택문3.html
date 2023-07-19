@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    var memNum = parseInt(prompt("입장객은 몇 명 인가요?"));
+    var colNum = parseInt(prompt("한 줄에 몇 명씩 앉나요?"));
+
+    //예) 입장객 30명 한 줄에 7 명씩 
+    //출력 ) 모두 5줄이 필요합니다.
+
+    //입장객 32명 한줄에 7명씩
+    //출력 모두 5줄이 필요하고 3좌석이 남습니다.
+
+    var line=parseInt(memNum / colNum);
+
+    if (memNum % colNum) {
+      line++
+    } 
+    document.write("모두 " + line + "줄이 필요합니다.");
+
+  </script>
+</body>
+
+</html>

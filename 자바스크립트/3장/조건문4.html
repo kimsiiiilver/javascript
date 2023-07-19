@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    var name = prompt("당신의 이름은?");
+    var month = parseInt(prompt("당신이 태어난 월은?"));
+
+
+    if (month >= 10 && month <= 11) {
+      document.write(name + "님은 가을에 태어나셨습니다.");
+    } else if (month >= 12 && month <= 2) {
+      document.write(name + "님은 겨울에 태어나셨습니다.");
+    } else if (month >= 3 && month <= 5) {
+      document.write(name + "님은 봄에 태어나셨습니다.");
+    } else if (month >= 6 && month <= 9) {
+      document.write(name + "님은 여름에 태어나셨습니다.");
+    } else {
+      document.write("다시 입력해 주시기 바랍니다.")
+    }
+  </script>
+</body>
+
+</html>

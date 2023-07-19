@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+
+<head>
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    //숫자 2개를 입력받으세요.
+    // 두 숫자를 더한 값이 3의 배수이거나 4의 배수이면 
+    //3,4의 배수입니다 출력
+    // 아니면 3,4의 배수입니다 출력
+
+    var num1 = parseInt(prompt("첫 번째 숫자를 입력하세요."));
+    var num2 = parseInt(prompt("두 번째 숫자를 입력하세요."));
+
+    var num3 = num1 + num2;
+
+    if (num3 % 3 == 0 || num3 % 4 == 0) {
+      document.write("3, 4의 배수입니다.");
+    } else {
+      document.write("3,4의 배수가 아닙니다.")
+    }
+  </script>
+
+</body>
+
+</html>

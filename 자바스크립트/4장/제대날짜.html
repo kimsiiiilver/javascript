@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Document</title>
+  <style>
+    *{
+      margin: 0;
+      padding: 0;
+    }
+    div{
+      width: 300px;
+      height: 300px;
+      border-radius: 50%;
+      border: 1px solid black;
+      margin: auto;
+      text-align: center;
+      background-color: skyblue;
+    }
+    span{
+      color: red;
+      font-size: 20pt 
+    }
+    p{
+      line-height: 4em;
+    }
+    h2{
+      margin-top: 60px;
+      line-height: 3em;
+    }
+  </style>
+</head>
+
+<body>
+  <script>
+    document.write("<div>")
+      var now = new Date();
+      var endDay = new Date("2024-09-01");
+
+      var diff = endDay.getTime() - now.getTime()
+      
+      var result = Math.ceil(diff / (60 * 1000 * 60 * 24));
+      
+      document.write("<h2>"+"제대 날짜"+"</h2>"+"<span>"+result+"</span>"+"일 남으셨습니다."+"<br>"+"이제 곧 집에가요"+"<p>"+"축하합니다!"+"</p>");
+      document.write("</div>")
+      </script>
+</body>
+
+</html>

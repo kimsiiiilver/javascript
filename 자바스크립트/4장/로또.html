@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Document</title>
+  <style>
+    *{
+      margin: auto;
+      padding: 0;
+    }
+    h1{
+      text-align: center;
+      margin-top: 130px;
+    }
+    li{
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      background-color: pink;
+      display: inline-block;
+      margin: 100px 15px auto;
+    }
+    ul{
+      list-style: none;
+      text-align: center;
+    }
+  </style>
+</head>
+
+<body>
+<div id="container">
+  <h1>로또 번호 출력하기</h1>
+  
+
+</div>
+
+  <script>
+    var num=[];
+
+    document.write("<ul>")
+      
+      for(var i=1; i<7; i++){
+        num[i] = parseInt(Math.random() * 45) + 1;
+        document.write("<li>")
+          document.write(num[i]);
+          document.write("</li>")
+        } 
+        document.write("</ul>")
+    document.querySelector()
+  </script>
+</body>
+
+</html>  

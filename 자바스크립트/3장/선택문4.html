@@ -3,6 +3,15 @@
 
 <head>
   <title>Document</title>
+  <style>
+    table, tr, td{
+      margin: 20px auto;
+      border: 1px solid black;
+      padding: 10px;
+      border-collapse: collapse;
+      text-align: center;
+    }
+  </style>
 </head>
 
 <body>
@@ -22,9 +31,27 @@
       rowNum = colNum - memNum % colNum;
     }
 
-
+//memNum:전체인원수, colNum :표의 칸 개수, rowNum:표의 줄 개수
 
     document.write("모두 " + line + "줄이 필요합니다. 남은 좌석은 " + rowNum + "입니다.");
+
+
+   document.write("<table>");
+    for(var t=0; t<line; t++){
+      document.write("<tr>");
+        for(var j=1; j<=colNum; j++){
+          document.write("<td>");
+            document.write("좌석"+(t*colNum+j));
+          document.write("</td>");
+          if((t*colNum+j) >= memNum){
+            break;
+          }
+        }
+      document.write("</tr>");
+    }
+
+   document.write("</table>");
+
   </script>
 </body>
 

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    var car = new Object();
+    car.company = "기아";
+    car.speed = 200;
+    car.color = "비건디와인";
+    car.info=function(){
+      document.write("자동차 제조회사 : "+this.company, "<br>");
+      document.write("자동차 색상 : "+this.color, "<br>");
+    }
+    car.info();
+
+    var tire = new Object();
+    tire.company="금호";
+    tire.cost=100000;
+    tire.size=30;
+    tire.printTire=function(){
+      document.write("타이어 제조회사 : "+this.company,"<br>");
+      document.write("타이어 금액 : "+this.cost,"<br>");
+    }
+    tire.printTire();
+  </script>
+
+</body>
+
+</html>

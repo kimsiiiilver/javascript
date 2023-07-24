@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Document</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    #container {
+      padding-top: 100px;
+      width: 100%;
+      max-width: 1200px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    h1 {
+      padding: 50px;
+    }
+
+    #container div {
+      display: flex;
+      justify-content: center;
+    }
+
+    #container p {
+      background-color: pink;
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      line-height: 100px;
+      font-size: 30px;
+    }
+
+    #container p:not(:first-child) {
+      margin-left: 30px;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="container">
+    <h1>로또 번호 출력하기</h1>
+    <div>
+      <p></p>
+      <p></p>
+      <p></p>
+      <p></p>
+      <p></p>
+      <p></p>
+    </div>
+  </div>
+
+  <script>
+    //1~45번까지 가지고 있는 배열 만들기
+    //자바스크립트는 배열 개수를 미리 정하지 않음
+    var lotto = [];
+    for (var i = 1; i <= 45; i++) {
+      lotto.push(i);
+    }
+    for (var i = 1; i< 7; i++) {
+      var ranNum = Math.floor(Math.random() * lotto.length);
+      document.querySelector(`p:nth-child(${i})`).innerHTML = lotto[ranNum];
+      //만약 i=0으로 시작하면 %{i+1}
+
+      //배열에서 선택된 순번의 값을 (중복) 제거
+      lotto.splice(ranNum, 1);
+    }
+  </script>
+</body>
+
+</html>

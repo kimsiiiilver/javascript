@@ -58,18 +58,25 @@
     //1~45번까지 가지고 있는 배열 만들기
     //자바스크립트는 배열 개수를 미리 정하지 않음
     var lotto = [];
+    var result = new Array();
+
     for (var i = 1; i <= 45; i++) {
       lotto.push(i);
     }
-    for (var i = 1; i< 7; i++) {
+    for (var i = 0; i < 6; i++) {
       var ranNum = Math.floor(Math.random() * lotto.length);
-      document.querySelector(`p:nth-child(${i})`).innerHTML = lotto[ranNum];
-      //만약 i=0으로 시작하면 %{i+1}
-
-      //배열에서 선택된 순번의 값을 (중복) 제거
+      result[i] = lotto[ranNum];
       lotto.splice(ranNum, 1);
     }
-    
+    result.sort(function(a,b) {   // 숫자 오름차순 정렬
+      return a - b;
+    });
+
+    for (var i = 0; i < result.length; i++) {
+      document.querySelector(`p:nth-child(${i + 1})`).innerHTML = result[i];
+      //만약 i=0으로 시작하면 %{i+1}
+    }
+
   </script>
 </body>
 

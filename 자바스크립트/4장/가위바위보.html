@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>가위바위보</title>
+</head>
+
+<body>
+  <h1>컴퓨터 가위, 바위, 보 맞추기</h1>
+
+
+  <script>
+    var game = prompt("가위, 바위, 보 중 선택하세요.", "가위");
+    var gameNum;
+    switch (game) {
+      case "가위":
+        gameNum = 1;
+        break;
+      case "바위":
+        gameNum = 2;
+        break;
+      case "보":
+        gameNum = 3;
+        break;
+      default:
+        alert("잘못 입력하셨습니다.");
+        location.reload();
+    }
+    var com = Math.ceil(Math.random() * 3); //1~3까지 랜덤으로 숫자 추출
+    var user;
+    document.write("<img src=imges1/" + com + ".png>");
+
+    if (gameNum == com&) {
+      document.write("비겼습니다.");
+    } else {
+      document.write("오답입니다.");
+    }
+
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Document</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+    table{
+      margin: 30px auto;
+    }
+    table,
+    tr,
+    td {
+      border: 1px solid black;
+      border-collapse: collapse;
+      text-align: center;
+      padding: 15px 20px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <table>
+    <tr>
+      <td>이름</td>
+      <td id="name"></td>
+    </tr>
+    <tr>
+      <td>소속</td>
+      <td id="ss"></td>
+    </tr>
+    <tr>
+      <td>선거구</td>
+      <td id="gg"></td>
+    </tr>
+  </table>
+  <script>
+    var name = prompt("당신의 이름은?");
+    var address = prompt("당신의 주소는?");
+
+    //var name  = "김여은";
+    //var address = "광주광역시 서구 농성동";
+
+    var add = address.split(" ");
+
+    document.querySelector("#name").innerHTML = name;
+    document.querySelector("#ss").innerHTML = add[0];
+    document.querySelector("#gg").innerHTML = add[1];
+
+
+
+
+
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Document</title>
+  </style>
+</head>
+
+<body>
+<script>
+  var email = prompt("이메일을 입력해 주세여");
+
+  var domain1 = email.substring(email.length-3);
+  var domain2 = email.substring(email.length-2);
+
+  if(email.indexOf("@")== -1||(domain1!="com")&&(domain1!="net")&&(domain2!="kr") ){
+    alert("이메일 형식이 올바르지 않습니다.");
+    location.reload();
+  }else{
+    document.write(email);
+  }
+
+
+
+
+</script>
+</body>
+
+</html>

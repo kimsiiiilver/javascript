@@ -52,7 +52,7 @@
   <div class="a">
   <div class="time">
     <h1>숫자 맞추기 게임</h1>
-    <p id="game">ㄷㅏㅇㅅㅣㄴㅇㅣ </p>
+    <p id="game">  </p>
     <p id="num">안녕하세요 한판떠용</p>
     <button onclick="clearInterval(auto_1)">STOP</button>
   </div>
@@ -62,7 +62,7 @@
 
 
 
-    document.querySelector("#game").innerHTML = parseInt(Math.random()*10);
+    document.querySelector("#game").innerHTML = "당신이 맞출 숫자 :"+parseInt(Math.random()*10);
     var auto_1 = setInterval(function () {
 
 

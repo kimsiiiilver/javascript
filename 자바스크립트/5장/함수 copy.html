@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Document</title>
+<style>
+  #box{
+    width: 200px;
+    height: 200px;
+    background-color: red;
+    border:  2px solid black;
+    margin: 20px auto;
+  }
+</style>
+</head>
+<body>
+  <div id="box">
+    <button onclick="change();">색상 변경</button>
+  </div>
+  
+  <script>
+    var color=["black", "blue", "green", "yellow", "red", "pink", "navy"];
+
+    function change(){
+        var box = document.getElementById("box");
+    var ran = Math.floor(Math.random()*color.length);
+    box.style.background=color[ran];
+    };
+
+
+
+  
+
+  </script>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Document</title>
+</head>
+<body>
+  <h1>당신이 좋아하는 과일은?</h1>
+  <input type="checkbox" name="fruit" value="사과" id="check">사과
+  <input type="checkbox" name="fruit" value="바나나" id="check">바나나
+  <input type="checkbox" name="fruit" value="복숭아" id="check">복숭아
+  <h1 id="result"></h1>
+  <button onclick="go();">확인</button>
+
+  <script>
+    function go(){
+      var selectedFruits = []; //선택한 요소들을 저장할 배열 생성
+
+      var checkboxes = document.querySelectorAll('input[type="checkbox"]');
+    
+    for(var i = 0; i<checkboxes.length; i++){
+      if(checkboxes[i].checked){
+        selectedFruits.push(checkboxes[i].value);
+      }
+    }
+    
+    if (selectedFruits.length==0){
+      document.querySelector("#result").innerText = "해당없음";
+    } else{
+      document.getElementById("result").innerText = selectedFruits;
+    }
+  }
+
+  </script>
+</body>
+</html>

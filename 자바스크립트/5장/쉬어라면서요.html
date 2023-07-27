@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Document</title>
+  <style>
+    #item {
+      position: relative;
+      width: 500px;
+      height: auto;
+      padding: 15px 20px;
+      margin: auto;
+    }
+
+    button {
+      background-color:rgba(225,225,225,0.7);
+      padding: 5px;
+      border: 1px solid #ccc;
+      font-size: 0.7em;
+    }
+    .over{
+      position: absolute;
+      left: 30px;
+      bottom: 30px;
+    }
+    .detail{
+      width: 400px;
+      text-align: left;
+      line-height: 1.8;
+      display: none;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="item">
+    <img src="images/푸바옹.jpg">
+    <button class="over" id="open" onclick="show()">상세 설명 보기</button>
+    <div id="desc" class="detail">
+      <h4>푸바오</h4>
+      <p>이름 뜻 : 행복을 주는 보물</p>
+      <br>2020년 용인에서 태어남.
+      <br> 대한민국에서 최초로 태어난 아기판다로 '용인푸씨', '푸공주', '푸뚠뚠' 등의 별명을 가지고 있다.
+      <button id="close" onclick="hide()">상세 설명 닫기</button>
+    </div>
+  </div>
+
+  <script>
+    function show(){
+      document.getElementById("desc").style.display="block";
+      document.getElementById("open").style.display="none";
+    }
+    function hide(){
+      document.getElementById("desc").style.display="none";
+      document.getElementById("open").style.display="block";
+    }
+
+  </script>
+</body>
+
+</html>

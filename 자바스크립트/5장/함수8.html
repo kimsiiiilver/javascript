@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    var num = 0;
+    function sum() {
+      num++;
+      document.write(num, "<br>");
+      if (num == 10) return;
+
+      sum();
+    }
+    sum();
+  </script>
+</body>
+
+</html>

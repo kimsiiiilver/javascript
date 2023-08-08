@@ -11,18 +11,31 @@
       text-align: center;
     }
 
-    #main #dogbox{
+    #main #dogbox {
       border-radius: 5px;
-      border:  5px solid gray;
+      border: 5px solid gray;
       display: inline-block;
       padding: 5px;
     }
+
+    #main #new {
+      position: relative;
+      top: -100px;
+      z-index: 10;
+    }
   </style>
   <script src="js/jquery_1.12.4_jquery.min.js"></script>
+  <script src="js/jquery-ui.min.js"></script>
   <script>
     function j_test(src) {
-      $("#main #dogbox").before("<img src='"+src+"'>");
-
+      var i = Math.floor(Math.random()*2); 
+      if(i==0){
+        $("#main #dogbox").after("<img id='new' src='" + src + "'>");
+        $("#main #dogbox").next().animate({ top: 0 }, 1000, "easeOutBounce");
+      }else{
+        $("#main #dogbox").before("<img id='new' src='" + src + "'>");
+        $("#main #dogbox").prev().animate({ top: 0 }, 1000, "easeOutBounce");
+      }
     }
   </script>
 </head>

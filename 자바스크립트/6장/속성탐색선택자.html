@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Document</title>
+  <style>
+    #main {
+      border: 5px solid gray;
+      padding: 5px;
+      width: 500px;
+      border-radius: 5px;
+    }
+
+    #main img {
+      position: relative;
+      width: 60px;
+      margin-bottom: 7px;
+    }
+  </style>
+
+  <script src="js/jquery_1.12.4_jquery.min.js"></script>
+  <script>
+    function go() {
+      $('#main img[name="discoDog"]').animate({ top: -100 }, 1000, 'swing');
+      $('#main img[name="discoDog"]').animate({ top: 0 }, 1000, 'swing');
+    }
+  </script>
+</head>
+
+<body>
+  <button type="button" onclick="go()">쉬바~</button>
+  <div id="main">
+    <img src="image/bird17.gif">
+    <img src="image/bird17.gif">
+    <img src="image/bird17.gif">
+    <img src="image/bird21.gif" name="discoDog">
+    <img src="image/bird17.gif">
+    <img src="image/bird17.gif">
+    <img src="image/bird17.gif">
+  </div>
+  </div>
+</body>
+
+</html>

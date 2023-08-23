@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Document</title>
+  <script src="js/jquery_1.12.4_jquery.min.js"></script>
+  <script>
+    $(function () {
+      $("#main img").click(function () {
+        var change=this;
+        $(change).attr("src", "image/huk2.gif");
+        setTimeout(() => {
+          $(change).attr("src", "image/huk1.gif");
+        }, 500);
+      });
+    });
+  </script>
+</head>
+
+<body>
+  <div id="main">
+    <img src="image/huk1.gif">
+    <img src="image/huk1.gif">
+    <img src="image/huk1.gif">
+    <img src="image/huk1.gif">
+    <img src="image/huk1.gif">
+  </div>
+</body>
+
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Document</title>
+  <style>
+    #main {
+      width: 400px;
+      margin: 50px auto;
+      text-align: center;
+      border: 3px solid lightgray;
+    }
+
+    #main img {
+      position: relative;
+    }
+  </style>
+  <script src="js/jquery_1.12.4_jquery.min.js"></script>
+  <script>
+    
+    $(function () {
+      $("#main img").hover(
+        function(){$(this).attr("src","image/huk2.gif")},
+        function(){$(this).attr("src","image/huk1.gif")} //attr 태그 안에 있는 값을 바꿀때
+      );
+
+
+    });
+  </script>
+</head>
+
+<body>
+  <div id="main">
+    <img src="image/huk1.gif">  
+    <img src="image/huk1.gif">  
+    <img src="image/huk1.gif">  
+    <img src="image/huk1.gif">  
+  </div>
+</body>
+
+</html>

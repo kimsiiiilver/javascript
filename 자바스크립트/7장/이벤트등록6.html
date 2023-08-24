@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Document</title>
+  <style>
+    #main {
+      width: 400px;
+      margin: 50px auto;
+      text-align: center;
+      border: 3px solid lightgray;
+    }
+
+    #main img {
+      position: relative;
+    }
+  </style>
+  <script src="js/jquery_1.12.4_jquery.min.js"></script>
+  <script>
+    //첫 번째 그림 클릭하면 위로 올라갔다 내려오기
+    // 두번째 그림 더블클릭하면 위로 올라갔다가 내려오기
+    //세번째 그림 클릭하면 계속 올라가기
+    //네번째 그림 더블클릭하면 아래로 내려가기
+    $(function () {
+      $("#main img:first").on("click", function () {
+        $(this).animate({top:'-50'},100)
+        .animate({top:'+=50'},100)
+      });
+
+      $("#main img:eq(1)").on("dblclick", function () {
+        var to = this;
+        $(to).css("top", "-100px");
+        setTimeout(() => {
+          $(to).css("top", "0px");
+        }, 500);
+      });
+      var eq2 = 0;
+      $("#main img:eq(2)").on("click", function () {
+        eq2 -= 10;
+        $(this).css("top", eq2);
+      });
+
+      var eq3 =0;
+      $("#dog1").on("dblclick", function () {
+        eq3 += 10;
+        $(this).css("top", eq3);
+      });
+
+
+    });
+  </script>
+</head>
+
+<body>
+  <div id="main">
+    <img src="image/bird17.gif" id="bird1">
+    <img src="image/bird20.gif" id="bird2">
+    <img src="image/bird28.gif" id="bird3">
+    <img src="image/shiba2.gif" id="dog1">
+  </div>
+</body>
+
+</html>

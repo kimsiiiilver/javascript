@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Document</title>
+  <style>
+    #main {
+      width: 400px;
+      margin: 50px auto;
+      text-align: center;
+      border: 3px solid lightgray;
+    }
+
+    #main img {
+      position: relative;
+    }
+  </style>
+  <script src="js/jquery_1.12.4_jquery.min.js"></script>
+  <script>
+    $(function () {
+      $(".btn1").on({
+        "mouseover":function(){
+          $(".txt1").css("background","red");
+        },
+        "mouseout":function(){
+          $(".txt1").css("background","none");
+        }
+      });
+
+      $(".btn2").hover(
+        function(){$(".txt2").css("background","blue");},
+        function(){$(".txt2").css("background","none");},
+      )
+
+
+    });
+  </script>
+</head>
+
+<body>
+  <p>
+    <button class="btn1">마우스 오버/마우스 아웃</button>
+  </p>
+  <p class="txt1">내용1</p>
+  <p>
+    <button class="btn2">마우스 호버</button>
+  </p>
+  <p class="txt2">내용2</p>
+</body>
+
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Document</title>
+  <script src="js/jquery_1.12.4_jquery.min.js"></script>
+  <script>
+    $(function () {
+      $(".btn1").on("click",function(e){
+        e.preventDefault();
+        $(".txt1").css("background","red");
+      });
+
+      $(".btn3").on("dblclick",function(e){
+        e.preventDefault();
+        $(".txt3").css("background","pink");
+      });
+    });
+  </script>
+</head>
+
+<body>
+<p>
+  <a href="http://www.naver.com" class="btn1">네이버</a>
+</p>
+<p class="txt1">내용1</p>
+<p>
+  <button class="btn3">버튼3</button>
+</p>
+<p class="txt3">내용3</p>
+</body>
+
+</html>

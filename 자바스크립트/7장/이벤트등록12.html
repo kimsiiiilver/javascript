@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Document</title>
+
+
+  <script src="js/jquery_1.12.4_jquery.min.js"></script>
+  <script>
+
+    $(function () {
+      $("#rel_site").on("change", function () {
+        var val = $(':selected').val();
+        $(".txt").val(val);
+      });
+
+    });
+  </script>
+</head>
+
+<body>
+  <b> 좋아하는 동물을 고르세용</b>
+  <br><Br>
+  <select id="rel_site">
+    <option value="">-선택-</option>
+    <option value="캥거루">캥거루</option>
+    <option value="도마뱀붙이">도마뱀붙이</option>
+    <option value="청타란튤라">청타란튤라</option>
+    <option value="흰죽지">흰죽지</option>
+    <option value="여우원숭이">여우원숭이</option>
+    <option value="딱다구리">딱다구리</option>
+    <option value="카이만">카이만</option>
+    <option value="귀욤뿌띵 선생님">귀염뿌띵 선생님</option>
+  </select>
+  <p>
+    <textarea class="txt"></textarea>
+  </p>
+</body>
+
+</html>

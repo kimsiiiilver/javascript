@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Document</title>
+  <style>
+    .main {
+      width: 500px;
+      height: 600px;
+      border: 5px solid gray;
+    }
+
+    #back {
+      width: 500px;
+      height: 600px;
+      position: absolute;
+    }
+
+    #user {
+      width: 50px;
+      height: 50px;
+      position: relative;
+      top: 500px;
+      left: 225px;
+    }
+
+    #sky {
+      width: 50px;
+      height: 50px;
+      position: absolute;
+      visibility: hidden;
+    }
+  </style>
+
+
+  <script src="js/jquery_1.12.4_jquery.min.js"></script>
+  <script>
+
+    $(function () {
+      $(document).on("keydown", keyEventFnc);
+      function keyEventFnc(e) {
+        switch (e.keyCode) {
+          case 37:
+            console.log("ss");
+            $('#user').animate({ left: '-=10' }, 10);
+            break;
+          case 39:
+            $('#user').animate({ left: '+=10' }, 10);
+            break;
+          case 38:
+            $('#user').animate({ top: '-=10' }, 10);
+            break;
+          case 40:
+            $('#user').animate({ top: '+=10' }, 10);
+            break;
+          case 32:
+            $('#sky').css({
+              "visibility": "visible",
+              "top":$('#user').css("top"),
+              "left":$('#user').css("left") 
+            });
+            $('#sky').animate({top:'0'},1000);
+            setTimeout(()=>{
+              $('#sky').css("visibility", "hidden");
+            },1000);
+        }
+      };
+
+    });
+  </script>
+</head>
+
+<body>
+  <div class="main">
+    <img src="image/짱구배경.jpg" id="back">
+    <img src="image/초코비.png" id="sky">
+    <img src="image/훈이.png" id="user">
+  </div>
+</body>
+
+</html>

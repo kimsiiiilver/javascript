@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+  <title>Document</title>
+
+  <script src="js/jquery_1.12.4_jquery.min.js"></script>
+  <script>
+    $(function () {
+      $(".btn2").hide();
+
+      $(".btn1").on("click", function () {
+        $(".box").slideUp(1000, "linear", function () {
+          $(".btn1").hide();
+          $(".btn2").show();
+        });
+      });
+
+      $(".btn2").on("click", function () {
+        $(".box").fadeIn(1000, "swing", function () {
+          $(".btn2").hide();
+          $(".btn1").show();
+        });
+      });
+
+      $(".btn3").on("click", function () {
+        $(".box").slideToggle(1000, "linear");
+      });
+
+      $(".btn4").on("click", function () {
+        $(".box").fadeTo("fast", 0.3);
+      });
+
+      $(".btn5").on("click", function () {
+        $(".box").fadeTo("fast", 1);
+      });
+
+    });
+  </script>
+</head>
+
+<body>
+  <p>
+    <button class="btn1">슬라이드업</button>
+    <button class="btn2">페이드인</button>
+  </p>
+  <p>
+    <button class="btn3">토글슬라이드</button>
+  </p>
+  <p>
+    <button class="btn4">페이드원(0.3)</button>
+    <button class="btn5">페이드투(1)</button>
+  </p>
+  <div class="box">
+    <div class="content">
+      함수(function)에는 '기능' 또는 '역할'이라는 뜻이 담겨 있습니다. 수학에서는 '미지수 x 값에 따라 y 값이 정해진다.'와 같이 수학식 사이에 관계가 있는 것을 함수라고 하지요. 프로그래밍에서
+      함수는 어떤 특정한 일을 하는 명령어들을 묶어놓은 것을 말합니다.
+
+      필요한 함수를 미리 만들어 놓으면 처리해야 할 정보가 있을 때마다 모든 명령어를 다 적지 않고도 필요한 함수만 불러 사용할 수 있습니다. 따라서 프로그램을 만들 때 자주 사용하는 기능이나 명령어를 묶어서
+      함수로 만들어 놓으면 이전과 같은 작업을 반복할 필요가 없어진답니다.
+
+      프로그램을 만들 때는 '함수 만들기', '함수 부르기'등의 명령어를 사용해서 함수를 만들 수 있습니다. 함수를 사용할 때에는 'fun()'이라는 용어를 쓰고, 괄호 안에 함수 이름을 넣어 활용하지요.
+
+      함수를 사용하는 예를 들어 볼까요? 덧셈에서 '+'는 ‘+’ 기호의 양쪽에 있는 값들을 더하는 기호입니다. 예를 들어, ○ + □ = ☆인 식이 있다고 합시다. 이 '+'를 이용하여 '+ 기호 양쪽을
+      더해라!'라는 명령을 함수로 미리 만들어놓으면 그 후에는 + 기호만 사용해도 컴퓨터가 명령을 이해하는 것이지요.
+
+      이처럼 특별한 기능을 하는 명령어들을 함께 묶어서 기호로 만들어두면 반복되는 기능을 함수이름만 불러서 사용할 수 있어요.
+    </div>
+  </div>
+</body>
+
+</html>

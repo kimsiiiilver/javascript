@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+  <title>Document</title>
+
+  <script src="js/jquery_1.12.4_jquery.min.js"></script>
+  <script>
+    $(function () {
+      $("#go").click(function () {
+        var pos = $("#main img").position();
+        for (var i = 0; i < 5; i++) {
+          var speed = Math.floor(Math.random() * 10 + 1) * 1000;
+
+          $("#main img:eq(" + i + ")").animate({
+            left: pos.left * -1
+          }, speed);
+        }
+      });
+
+
+    });
+  </script>
+  <style>
+    #main {
+      position: relative;
+      text-align: right;
+    }
+
+    #main img {
+      position: relative;
+      left: 0;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="main">
+    <img src="image/snail.gif"><br>
+    <img src="image/snail.gif"><br>
+    <img src="image/snail.gif"><br>
+    <img src="image/snail.gif"><br>
+    <img src="image/snail.gif"><br>
+  </div>
+  <br>
+  <button type="button" id="go">달려라 달팽쓰!!</button>
+</body>
+
+</html>

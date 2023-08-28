@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+  <title>Document</title>
+
+  <script src="js/jquery_1.12.4_jquery.min.js"></script>
+  <script>
+    $(function () {
+        $("#main img").on("click",function(){
+          $(this).toggle('slow','linear')
+        });
+      $("#bt").on('click', function(){
+        $("#main img").slideToggle(1000,"linear");
+      });
+    
+    });
+  </script>
+</head>
+
+<body>
+<div id="main">
+  <img src="image/snail.gif">
+  <img src="image/훈이.png">
+  <img src="image/초코비.png">
+  <img src="image/dog021.gif">
+</div>
+<button id="bt">토글</button>
+</body>
+
+</html>
